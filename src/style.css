@@ -1,0 +1,27 @@
+.error{
+    color:red;
+}
+.addition{
+ display: block;   
+ float:right;
+ margin-right: 20px;
+}
+.price-hike-box{
+    background: #f4f4f4;
+    padding: 25px;
+  }
+  .price-hike-box h2{
+  color: #f24225;
+  font-size: 35px;
+  margin-bottom: 15px;
+  line-height: 15px;
+  }
+  .price-hike-box h2 span{
+    font-size: 14px;
+      color: #4a4a4a;
+  }
+  .price-hike-box  .submit-butt{
+    background: #f24225;
+    border-radius: 0px;
+  
+  }

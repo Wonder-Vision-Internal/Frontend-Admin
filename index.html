@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<link>
+<meta charset="UTF-8" />
+<link rel="icon" type="image/svg+xml" href="./favicon.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Google Font: Source Sans Pro -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
+<!-- iCheck for checkboxes and radio inputs -->
+<link rel="stylesheet" href="./plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="./dist/css/adminlte.min.css">
+<link rel="stylesheet" href="./dist/css/adminlte.css">
+<!-- DataTables -->
+<link rel="stylesheet" href="./plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="./plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+<link rel="stylesheet" href="./plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+<!-- Select2 -->
+<link rel="stylesheet" href="./plugins/select2/css/select2.min.css">
+<link rel="stylesheet" href="./plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+
+<!-- Toastr -->
+<link rel="stylesheet" href="./plugins/toastr/toastr.min.css">
+
+<title>Wonder Vision Admin</title>
+</head>
+
+<body className="hold-transition sidebar-mini sidebar-collapse layout-fixed">
+  <div className="wrapper">
+    <div id="root"></div>
+  </div>
+  <!-- jQuery -->
+  <script src="./plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="./plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script type="module" src="./src/main.jsx"></script>
+
+
+
+  <!-- Bootstrap 4 -->
+  <script src="./plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="./plugins/jquery-validation/jquery.validate.min.js"></script>
+  <script src="./plugins/jquery-validation/additional-methods.min.js"></script>
+  <script src="./plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+  <!-- InputMask -->
+  <script src="./plugins/moment/moment.min.js"></script>
+  <script src="./plugins/inputmask/jquery.inputmask.min.js"></script>
+  <!-- Bootstrap Switch -->
+  <script src="./plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="./dist/js/adminlte.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <!-- <script src="./dist/js/demo.js"></script> -->
+
+  <!-- DataTables  & Plugins -->
+  <!-- <script src="./plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="./plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="./plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="./plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="./plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="./plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="./plugins/jszip/jszip.min.js"></script>
+  <script src="./plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="./plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="./plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="./plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="./plugins/datatables-buttons/js/buttons.colVis.min.js"></script> -->
+
+  <!-- Select2 -->
+  <!-- <script src="./plugins/select2/js/select2.full.min.js"></script> -->
+
+  <script>
+    $(document).ready(function () {
+      // Initialize Bootstrap dropdown
+      $('.nav-item.menu-open').on('click', function () {
+        $(this).toggleClass('menu-open');
+      });
+    });
+  </script>
+  <!-- <script>
+    $(function () {
+      
+      $("#example1").DataTable({
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+        "paging": false,
+        "ordering": false,
+        "info": false,
+        
+        //"buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        // "processing": true,
+        // "serverSide": true,
+        "lengthChange": true,
+        "lengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
+        "pageLength": 10
+      });
+      // buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+    });
+  </script> -->
+  <!-- <script>
+    $(function () {
+      //Initialize Select2 Elements
+      $('.select2').select2()
+
+      //Initialize Select2 Elements
+      // $('.select2bs4').select2({
+      //   theme: 'bootstrap4'
+      // })
+    })
+  </script> -->
+  <!-- Toastr -->
+  <script src="./plugins/toastr/toastr.min.js"></script>
+
+</body>
+
+</html>

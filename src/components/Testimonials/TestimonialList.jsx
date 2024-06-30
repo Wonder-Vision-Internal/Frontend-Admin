@@ -61,6 +61,7 @@ const TestimonialList = () => {
                                 <div className="card">
                                     <div className="card-header">
                                         <Link to='/testimonialform'>  <button className='btn bg-gradient-primary addition'>ADD</button> </Link>
+                                        <Link to='/testimonial-list-carousel'>  <button className='btn bg-gradient-primary addition'>ADD Carousel</button> </Link>
                                         <h3 className="card-title"></h3>
                                     </div>
                                     {/* {/* <!-- /.card-header --> */}

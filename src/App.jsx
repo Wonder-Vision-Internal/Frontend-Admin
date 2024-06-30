@@ -95,6 +95,10 @@ import OtherHomestay_Package from "./components/Packages/OtherHomestay_Package"
 import AddOtherHomestay_Package from "./components/Packages/AddOtherHomestay_Package"
 import AddOtherPackage_Package from "./components/Packages/AddOtherPackage_Package"
 import OtherPackage_Package from "./components/Packages/OtherPackage_Package"
+import CarouselData from "./components/Testimonials/CarouselData"
+import BestThings from "./components/Packages/BestThings"
+import Bestplaces from "./components/Packages/Bestplaces"
+import VideoCard from "./components/Packages/VideoCard"
 
 
 
@@ -180,6 +184,9 @@ function App() {
         <Route path='/package/addotherhomestay' element={<PrivateRoute Component={AddOtherHomestay_Package}/>}/>
         <Route path='/package/otherpackages' element={<PrivateRoute Component={OtherPackage_Package}/>}/>
         <Route path='/package/addotherpackage' element={<PrivateRoute Component={AddOtherPackage_Package}/>}/>
+        <Route path='/package/bestthings' element={<PrivateRoute Component={BestThings}/>}/>
+        <Route path='/package/bestplaces' element={<PrivateRoute Component={Bestplaces}/>}/>
+        <Route path='/package/videocard' element={<PrivateRoute Component={VideoCard}/>}/>
 
         <Route path='/banner/:page_name' element={<PrivateRoute Component={Banner}/>}/>
         <Route path='/banner/addbanner/:page_name' element={<PrivateRoute Component={MainBannerForm}/>}/>
@@ -229,6 +236,7 @@ function App() {
 
 
         <Route path='/testimonial-list' element={<PrivateRoute Component={TestimonialList}/>}/>
+        <Route path='/testimonial-list-carousel' element={<PrivateRoute Component={CarouselData}/>}/>
         <Route path='/testimonialform' element={<PrivateRoute Component={TestimonialForm}/>}/>
         <Route path='/edit-testimonial/:postId' element={<PrivateRoute Component={TestimonialForm}/>}/>
 

@@ -118,7 +118,32 @@ useEffect(() => {
                           <i className="fas fa-plus"></i>&nbsp;ADD NEW
                         </button>
                       </Link>
+                      <Link to="/package/bestthings" className="addition">
+                        <button
+                          type="button"
+                          className="btn bg-gradient-primary"
+                        >
+                          <i className="fas fa-plus"></i>&nbsp;Add Best Things
+                        </button>
+                      </Link>
+                      <Link to="/package/bestplaces" className="addition">
+                        <button
+                          type="button"
+                          className="btn bg-gradient-primary"
+                        >
+                          <i className="fas fa-plus"></i>&nbsp;Add Best Places
+                        </button>
+                      </Link>
+                      <Link to="/package/videocard" className="addition">
+                        <button
+                          type="button"
+                          className="btn bg-gradient-primary"
+                        >
+                          <i className="fas fa-plus"></i>&nbsp;Add Video Card
+                        </button>
+                      </Link>
                     </div>
+                    
                   </div>
 
                   <div className="card-body">

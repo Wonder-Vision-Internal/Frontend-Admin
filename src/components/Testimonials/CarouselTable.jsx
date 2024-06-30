@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import Table from "react-bootstrap/Table";
-const url = process.env.REACT_APP_BASE_API_URL;
+const url = import.meta.env.VITE_BASE_API_URL;
 
 function CarouselTable({ setShow, setFormData, getDataapi, getData }) {
   const handleShow = (item) => {

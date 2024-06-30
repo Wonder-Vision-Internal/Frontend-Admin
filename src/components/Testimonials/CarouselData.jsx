@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import CarouselModel from "./CarouselModal";
 import CarouselTable from "./CarouselTable";
 import axios from "axios";
-const url = process.env.REACT_APP_BASE_API_URL;
+const url = import.meta.env.VITE_BASE_API_URL;
 
 const CarouselData = () => {
   const [show, setShow] = useState(false);

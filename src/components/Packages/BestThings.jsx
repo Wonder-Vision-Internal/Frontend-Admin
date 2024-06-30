@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import BestThingTable from "./BestThingTable";
 import BestThingModel from "./BestThingModel";
 import axios from "axios";
-const url = process.env.REACT_APP_BASE_API_URL;
+const url = import.meta.env.VITE_BASE_API_URL;
 
 const BestThings = () => {
   const [show, setShow] = useState(false);

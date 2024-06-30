@@ -31,7 +31,7 @@ const Navbar = () => {
             <div className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
               {/* <span class="dropdown-item dropdown-header">15 Notifications</span> */}
               <div className="dropdown-divider"></div>
-              {process.env.REACT_APP_BASE_API_URL ==
+              {import.meta.env.VITE_BASE_API_URL ==
               "http://localhost:7000/admin" ? (
                 <a href="http://localhost:5173" class="dropdown-item">
                   <i className="fas fa-right-from-bracket"></i> Logout

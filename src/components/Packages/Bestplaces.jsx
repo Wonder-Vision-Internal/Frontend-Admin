@@ -5,7 +5,7 @@ import BestThingTable from "./BestThingTable";
 import BestplaceModal from "./BestplaceModal";
 import BestplaceTable from "./BestplaceTable";
 import axios from "axios";
-const url = process.env.REACT_APP_BASE_API_URL;
+const url = import.meta.env.VITE_BASE_API_URL;
 
 
 const Bestplaces = () => {

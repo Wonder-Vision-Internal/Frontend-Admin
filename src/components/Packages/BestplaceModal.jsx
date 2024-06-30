@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-const url = process.env.REACT_APP_BASE_API_URL;
+const url = import.meta.env.VITE_BASE_API_URL;
 
 
 function BestplaceModal({ setShow, show, formData, setFormData, getData }) {

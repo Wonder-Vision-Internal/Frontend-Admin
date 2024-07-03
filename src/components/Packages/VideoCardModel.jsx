@@ -19,7 +19,7 @@ function VideoCardModel({ setShow, show, formData, setFormData, getData }) {
   const handleUpdate = async () => {
     const { __v, ...formDataWithoutV } = formData;
     try {
-      const res = await axios.patch(
+      const res = await axios.post(
         `${url}/update-package-youtube-url/${formData._id}`,
         {
           ...formDataWithoutV,

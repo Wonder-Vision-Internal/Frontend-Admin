@@ -20,8 +20,8 @@ function BestplaceModal({ setShow, show, formData, setFormData, getData }) {
   const handleUpdate = async () => {
     const { __v, ...formDataWithoutV } = formData;
     try {
-      const res = await axios.patch(
-        `${url}/update-best-things-to-do/${formData._id}`,
+      const res = await axios.post(
+        `${url}/update-best-places/${formData._id}`,
         {
           ...formDataWithoutV,
           slug: formData.slug,

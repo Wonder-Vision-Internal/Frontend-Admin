@@ -25,7 +25,7 @@ function BestThingModel({
   const handleUpdate = async () => {
     const { __v, ...formDataWithoutV } = formData;
     try {
-      const res = await axios.patch(
+      const res = await axios.post(
         `${url}/update-best-things-to-do/${formData._id}`,
         {
           ...formDataWithoutV,

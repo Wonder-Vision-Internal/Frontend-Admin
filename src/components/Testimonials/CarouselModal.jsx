@@ -8,10 +8,26 @@ const url = import.meta.env.VITE_BASE_API_URL;
 function CarouselModel({ setShow, show, formData, setFormData, getData }) {
   const handleClose = () => setShow(false);
 
-  const handleChange = (e) => {
+  const handleGetImgURL = async (value) => {
+    const formData = new FormData();
+    formData.append('file', value);
+
+    try {
+      const response = await axios.post(`${url}/add-img`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+      return response.data.filename;
+    } catch (error) {
+      console.error('Error uploading file:', error);
+    }
+  };
+
+  const handleChange = async(e) => {
     const { name, type, files, value } = e.target;
     if (type === "file") {
-      setFormData({ ...formData, [name]: files[0] });
+      setFormData({ ...formData, [name]: await handleGetImgURL(files[0]) });
     } else {
       setFormData({ ...formData, [name]: value });
     }
@@ -35,7 +51,7 @@ function CarouselModel({ setShow, show, formData, setFormData, getData }) {
       toastr.error("Something went wrong");
     }
   };
-
+  
   return (
     <>
       <Modal

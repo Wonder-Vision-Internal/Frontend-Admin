@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../Layout";
-import { Link, useNavigate } from "react-router-dom";
 import VideoCardTable from "./VideoCardTable";
 import VideoCardModel from "./VideoCardModel";
 import axios from "axios";
 const url = import.meta.env.VITE_BASE_API_URL;
-
 
 const VideoCard = () => {
   const [show, setShow] = useState(false);
@@ -14,6 +12,7 @@ const VideoCard = () => {
   const [postData, setPostData] = useState({
     url: "",
     slug: "",
+    type: "TOUR GUIDANCE"
   });
 
   const getData = async () => {
@@ -120,6 +119,17 @@ const VideoCard = () => {
                               name="slug"
                               onChange={handleChange}
                             />
+                          </div>
+                          <div className="form-group">
+                            <label htmlFor="exampleInputEmail1">Type</label> 
+                            <select
+                              className="form-control"
+                              name="type"
+                              onChange={handleChange}
+                            >
+                              <option value="TOUR GUIDANCE" selected>TOUR GUIDANCE</option>
+                              <option value="OUR HAPPY CLIENTS">OUR HAPPY CLIENTS</option>
+                            </select>
                           </div>
                         </div>
                       </div>

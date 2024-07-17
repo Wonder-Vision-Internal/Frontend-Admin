@@ -30,6 +30,7 @@ function VideoCardTable({ setShow, setFormData, getDataapi, getData }) {
         <tr>
           <th>S.No</th>
           <th>URL</th>
+          <th>Type</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -45,6 +46,7 @@ function VideoCardTable({ setShow, setFormData, getDataapi, getData }) {
                 }}
               ></div>
             </td>
+            <td>{item.type}</td>
             <td
               style={{
                 display: "flex",

@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import Table from "react-bootstrap/Table";
-const url = process.env.REACT_APP_BASE_API_URL;
+const url = import.meta.env.VITE_BASE_API_URL;
 
 
 function BestThingTable({ setShow, setFormData, getDataapi, getData }) {
@@ -40,7 +40,7 @@ function BestThingTable({ setShow, setFormData, getDataapi, getData }) {
           <tr key={index}>
             <td>{index + 1}</td>
             <td>
-              <img src={`${url}/${item.icon}`} alt="Screen" style={{ width: "200px" }} />
+              <img src={`${item.icon}`} alt="Screen" style={{ width: "200px" }} />
             </td>
             <td>{item.title}</td>
             <td

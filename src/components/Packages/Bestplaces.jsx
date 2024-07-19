@@ -5,7 +5,7 @@ import BestThingTable from "./BestThingTable";
 import BestplaceModal from "./BestplaceModal";
 import BestplaceTable from "./BestplaceTable";
 import axios from "axios";
-const url = process.env.REACT_APP_BASE_API_URL;
+const url = import.meta.env.VITE_BASE_API_URL;
 
 
 const Bestplaces = () => {
@@ -67,7 +67,7 @@ const Bestplaces = () => {
     try {
       const res = await axios.post(`${url}/add-best-places`, {
         ...postData,
-        img: await handleGetImgURL(postData.img),
+        img: `${import.meta.env.VITE_BASE_API_URL}/${await handleGetImgURL(postData.img)}`,
       });
       if (res.status === 200) {
         toastr.success("Successful Added");

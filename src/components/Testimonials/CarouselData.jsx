@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import CarouselModel from "./CarouselModal";
 import CarouselTable from "./CarouselTable";
 import axios from "axios";
-const url = process.env.REACT_APP_BASE_API_URL;
+const url = import.meta.env.VITE_BASE_API_URL;
 
 const CarouselData = () => {
   const [show, setShow] = useState(false);
@@ -64,8 +64,8 @@ const CarouselData = () => {
     try {
       const res = await axios.post(`${url}/add-testimonials-crousel`, {
         ...postData,
-        userImg: await handleGetImgURL(postData.userImg),
-        screenImg: await handleGetImgURL(postData.screenImg),
+        userImg: `${import.meta.env.VITE_BASE_API_URL}/${await handleGetImgURL(postData.userImg)}`,
+        screenImg: `${import.meta.env.VITE_BASE_API_URL}/${await handleGetImgURL(postData.screenImg)}`,
       });
       if(res.status === 200) {
         toastr.success('Successful Added');

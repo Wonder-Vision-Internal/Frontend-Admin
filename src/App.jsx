@@ -107,7 +107,7 @@ function App() {
 
   return (
     <>
-    <BrowserRouter basename= {process.env.REACT_APP_BASE_DIRECTORY} >
+    <BrowserRouter basename= {import.meta.env.VITE_BASE_DIRECTORY} >
       <Routes>
         <Route path='/' element={<Login/>}/>
 

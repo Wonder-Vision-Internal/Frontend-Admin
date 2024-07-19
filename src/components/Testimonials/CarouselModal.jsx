@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-const url = process.env.REACT_APP_BASE_API_URL;
+const url = import.meta.env.VITE_BASE_API_URL;
 
 
 function CarouselModel({ setShow, show, formData, setFormData, getData }) {
@@ -17,13 +17,31 @@ function CarouselModel({ setShow, show, formData, setFormData, getData }) {
     }
   };
 
+  const handleGetImgURL = async (value) => {
+    const formData = new FormData();
+    formData.append("file", value);
+
+    try {
+      const response = await axios.post(`${url}/add-img`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      return response.data.filename;
+    } catch (error) {
+      console.error("Error uploading file:", error);
+    }
+  };
+
   const handleUpdate = async () => {
     const { __v, ...formDataWithoutV } = formData;
     try {
-      const res = await axios.patch(
+      const res = await axios.post(
         `${url}/update-testimonials-crousel/${formData._id}`,
         {
           ...formDataWithoutV,
+          userImg: `${import.meta.env.VITE_BASE_API_URL}/${await handleGetImgURL(formData.userImg)}`,
+          screenImg: `${import.meta.env.VITE_BASE_API_URL}/${await handleGetImgURL(formData.screenImg)}`,
         }
       );
       if (res.status === 200) {

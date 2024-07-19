@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import BestThingTable from "./BestThingTable";
 import BestThingModel from "./BestThingModel";
 import axios from "axios";
-const url = process.env.REACT_APP_BASE_API_URL;
+const url = import.meta.env.VITE_BASE_API_URL;
 
 const BestThings = () => {
   const [show, setShow] = useState(false);
@@ -64,7 +64,7 @@ const BestThings = () => {
     try {
       const res = await axios.post(`${url}/add-best-things-to-do`, {
         ...postData,
-        icon: await handleGetImgURL(postData.icon),
+        icon: `${import.meta.env.VITE_BASE_API_URL}/${await handleGetImgURL(postData.icon)}`,
         slug: postData.slug,
       });
       if (res.status === 200) {

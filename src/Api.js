@@ -2,7 +2,7 @@ import axios from 'axios'
 import bcrypt from "bcryptjs-react";
 
 
-const url = process.env.REACT_APP_BASE_API_URL
+const url = import.meta.env.VITE_BASE_API_URL
 
 export const login = (input) => axios.post(`${url}/login`,input)
     .then((res) => {

@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import VideoCardTable from "./VideoCardTable";
 import VideoCardModel from "./VideoCardModel";
 import axios from "axios";
-const url = process.env.REACT_APP_BASE_API_URL;
+const url = import.meta.env.VITE_BASE_API_URL;
 
 
 const VideoCard = () => {

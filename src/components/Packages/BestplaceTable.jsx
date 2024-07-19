@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import Table from "react-bootstrap/Table";
-const url = process.env.REACT_APP_BASE_API_URL;
+const url = import.meta.env.VITE_BASE_API_URL;
 
 
 function BestplaceTable({ setShow, setFormData, getDataapi, getData }) {
@@ -43,7 +43,7 @@ function BestplaceTable({ setShow, setFormData, getDataapi, getData }) {
             <td>{index + 1}</td>
             <td>
               <img
-                src={`${url}/${item.img}`}
+                src={`${item.img}`}
                 alt="Screen"
                 style={{ width: "200px" }}
               />

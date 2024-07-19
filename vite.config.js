@@ -10,6 +10,7 @@ export default defineConfig(({ mode }) => {
       'process.env': env
     },
     plugins: [react()],
+    base: '/admin/',
   }
 })
 

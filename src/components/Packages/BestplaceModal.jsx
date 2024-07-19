@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-const url = process.env.REACT_APP_BASE_API_URL;
+const url = import.meta.env.VITE_BASE_API_URL;
 
 
 function BestplaceModal({ setShow, show, formData, setFormData, getData }) {
@@ -17,14 +17,32 @@ function BestplaceModal({ setShow, show, formData, setFormData, getData }) {
     }
   };
 
+  const handleGetImgURL = async (value) => {
+    const formData = new FormData();
+    formData.append("file", value);
+
+    try {
+      const response = await axios.post(`${url}/add-img`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      return response.data.filename;
+    } catch (error) {
+      console.error("Error uploading file:", error);
+    }
+  };
+
   const handleUpdate = async () => {
+    console.log("formData", formData)
     const { __v, ...formDataWithoutV } = formData;
     try {
-      const res = await axios.patch(
-        `${url}/update-best-things-to-do/${formData._id}`,
+      const res = await axios.post(
+        `${url}/update-best-places/${formData._id}`,
         {
           ...formDataWithoutV,
           slug: formData.slug,
+          img: `${import.meta.env.VITE_BASE_API_URL}/${await handleGetImgURL(formData.img)}`,
         }
       );
       if (res.status === 200) {
